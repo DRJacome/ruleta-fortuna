@@ -1,13 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: wheat;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.monedas {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 150px;
+}
+
+.monedas img {
+  width: 40px;
+}
+
+.tiradas {
+  position: absolute;
+  top: 5px;
+  left: 155px;
+  width: 40px;
+}
+
+.titulo {
+  text-align: center;
+}
+
+.titulo h3 {
+  margin: 0 auto;
+  width: 60%;
+}
+
+.tablero {
+  position: relative;
+  margin: 10px auto 0;
+  text-align: center;
+  width: 720px;
+}
+
+.ruleta {
+  width: 500px;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto 15px;
+}
+
+.marcador {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 120px;
+  top: 174px;
+}
+
+img {
+  width: 100%;
+}
+
+.letreroPremio {
+  animation: fadein 1.5s;
+  border-radius: 30px;
+  padding: 5px;
+
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.indicador {
+  background-color: #444444;
+  width: 250px;
+  height: 20px;
+  border-radius: 12px;
+  padding: 4px;
+  margin: 15px auto 10px;
+}
+
+.indicadorPotencia {
+  border-radius: 8px;
+  width: 0%;
+  height: 20px;
+  background-color: orange;
+  animation-name: animacionBarra;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.paradaBarraPotencia {
+  animation-play-state: paused;
+}
+
+@keyframes animacionBarra {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0%;
+  }
+}
+
+.lanzar, .reiniciar {
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 20px;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.lanzar:hover, .reiniciar:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.lanzar:active, .reiniciar:active {
+  transform: scale(0.95);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
 }
